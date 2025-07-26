@@ -1,0 +1,32 @@
+---
+import { ClientRouter } from 'astro:transitions';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Website</title>
+    <ClientRouter fallback="swap" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a>
+          <a href="/">
+            Page A
+          </a>
+          <a href="/page">
+            Page B
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <slot />
+  </body>
+</html>
+
+<style is:global></style>
